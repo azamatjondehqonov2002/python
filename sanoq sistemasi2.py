@@ -1,5 +1,5 @@
 def onlik(n,a):
-    s=""
+    s=0
     k=True
     n=str(n)
     for i in range(n.__len__()):
@@ -7,13 +7,13 @@ def onlik(n,a):
             if int(n[i])>=a:
                 k=False
             else:
-                s+=str(int(n[i])*(int(a)**i))
+                s+=int(n[i])*(int(a)**(n.__len__() - i-1))
         
         elif ord(n[i])>=65 and ord(n[i])<=90:
             if ord(n[i])>=a+55:
                 k=False
             else:
-                s+=str((ord(n[i])-55)*(a**i))
+                s+=(ord(n[i])-55)*(a**(n.__len__() - i-1))
     
     if k:
         return s
@@ -25,10 +25,10 @@ def otkazish(n,b):
     n=int(n)
     while n!=0:
         if n%b<10:
-            s+=str(n%b)
+            s=str(n%b)+s
             n//=b
         else:
-            s+=chr(n%b+55)
+            s=chr(n%b+55)+s
             n//=b
     
     return s
