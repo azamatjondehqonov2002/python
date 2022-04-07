@@ -1,11 +1,8 @@
-a=int(input("a = "))
-b=int(input("b = "))
-c=int(input("c = "))
-d=int(input("d = "))
+#1-masala
+n=int(input("n = "))
+s=0
+for x in range(0-n,n+1):
+    if x!=0:
+        s+=1/x
 
-a = a+b+c+d
-d=a-b-c-d
-c=a-b-c-d
-b=a-b-c-d
-a=a-b-c-d
-print("a = ",a,"b = ",b,"c = ",c,"d = ",d)
+print("S = ",s)

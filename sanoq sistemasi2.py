@@ -8,7 +8,7 @@ def onlik(n,a):
                 k=False
             else:
                 s+=int(n[i])*(int(a)**(n.__len__() - i-1))
-        
+             
         elif ord(n[i])>=65 and ord(n[i])<=90:
             if ord(n[i])>=a+55:
                 k=False

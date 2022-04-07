@@ -1,9 +1,13 @@
-a=int(input())
-n=a%10*10
-a=a//10
-n+=a%10
-a//=10
-n=n*10+a%10
-a//=10
-n=n*10+a
-print(n)
+#2-masala
+def butun(a,b):
+    i=0
+    while a>=b:
+        a-=b
+        i+=1
+    return i
+
+a = int (input("a = "))
+b = int (input("b = "))
+k=butun(a,b)
+q=a-k*b
+print(k, " chiqib ",q," qoldiq qoladi.")
